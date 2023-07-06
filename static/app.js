@@ -1,4 +1,5 @@
 async function createMemo(value) {
+  console.log("입력값은 :", value);
   const res = await fetch("/memos", {
     method: "POST",
     headers: {
@@ -10,7 +11,7 @@ async function createMemo(value) {
     }),
   });
   const jsonRes = await res.json();
-  console.log("값은 :", value);
+  console.log(jsonRes); //결과값
 }
 
 function handleSubmit(event) {
